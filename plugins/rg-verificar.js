@@ -1,99 +1,77 @@
-import axios from 'axios'
 import { createHash } from 'crypto'
-import PhoneNumber from 'awesome-phonenumber'
-import moment from 'moment-timezone'
 
 let Reg = /\|?(.*)([.|] *?)([0-9]*)$/i
-let handler = async function (m, { conn, text, args, usedPrefix, command }) {
-    let user = global.db.data.users[m.sender]
-    let name2 = conn.getName(m.sender)
-    let whe = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : m.sender
-    let perfil = await conn.profilePictureUrl(whe, 'image').catch(_ => 'https://telegra.ph/file/0bb7e9e7c8cb4e820f1fe.jpg')
 
-    if (user.registered === true) {
-        return m.reply(`*『✦』Ya estás registrado, para volver a registrarte, usa el comando: #unreg*`)
-    }
+// Define la variable canales con la URL correcta
+const canales = 'https://whatsapp.com/channel/0029VaYh3Zm4dTnQKQ3VLT0h'; // Reemplaza con la URL correcta
 
-    if (!Reg.test(text)) return m.reply(`*『✦』El comando ingresado es incorrecto, uselo de la siguiente manera:*\n\n#reg *Nombre.edad*\n\n\`\`\`Ejemplo:\`\`\`\n#reg *${name2}.18*`)
+let handler = async function (m, { conn, text, usedPrefix, command }) {
+  let user = global.db.data.users[m.sender]
+  let name2 = conn.getName(m.sender)
 
-    let [_, name, splitter, age] = text.match(Reg)
-    if (!name) return m.reply('*『✦』No puedes registrarte sin nombre, el nombre es obligatorio. Inténtelo de nuevo.*')
-    if (!age) return m.reply('*『✦』No puedes registrarte sin la edad, la edad es opcional. Inténtelo de nuevo.*')
-    if (name.length >= 100) return m.reply('*『✦』El nombre no debe tener más de 30 caracteres.*')
+  if (user.registered === true) throw `*『✦』Ya estás registrado, para volver a registrarte, usa el comando: #unreg*`
+  if (!Reg.test(text)) throw `*『✦』El comando ingresado es incorrecto, uselo de la siguiente manera:*\n\n#reg *Nombre.edad*\n\n\`\`\`Ejemplo:\`\`\`\n#reg *${name2}.18*`
 
-    age = parseInt(age)
-    if (age > 1000) return m.reply('⏤͟͟͞͞𝑳𝒂 𝑬𝒅𝒂𝒅 𝒊𝒏𝒈𝒓𝒆𝒔𝒂𝒅𝒂 𝑬𝒔 𝒊𝒏𝒄𝒐𝒓𝒓𝒆𝒄𝒕𝒂⏤͟͟͞͞')
-    if (age < 5) return m.reply('⏤͟͟͞͞𝑳𝒂 𝑬𝒅𝒂𝒅 𝒊𝒏𝒈𝒓𝒆𝒔𝒂𝒅𝒂 𝑬𝒔 𝒊𝒏𝒄𝒐𝒓𝒓𝒆𝒄𝒕𝒂⏤͟͟͞͞')
+  let [_, name, splitter, age] = text.match(Reg)
 
-    user.name = name.trim()
-    user.age = age
-    user.regTime = +new Date
-    user.registered = true
-    global.db.data.users[m.sender].money += 600
-    global.db.data.users[m.sender].estrellas += 10
-    global.db.data.users[m.sender].exp += 245
-    global.db.data.users[m.sender].joincount += 5    
+  if (!name) throw '*『✦』No puedes registrarte sin nombre, el nombre es obligatorio. Inténtelo de nuevo.*'
+  if (!age) throw '*『✦』No puedes registrarte sin la edad, la edad es opcional. Inténtelo de nuevo.*'
+  if (name.length >= 30) throw '*『✦』El nombre no debe tener más de 30 caracteres.*' 
 
-    let who;
-    if (m.quoted && m.quoted.sender) {
-        who = m.quoted.sender;
-    } else {
-        who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender;
-    }
+  age = parseInt(age)
 
-let sn = createHash('md5').update(m.sender).digest('hex');
-let regbot = `
-╔═̴̸᪳᷍═̷✩⃢̴═⃨⃜═̶⃕╡̴˚̸᪵✧̷⃘⃛᪻᪻᪻᷼᷍✧̵⃨˚̷᪵╞̶⃔══⃢̸⃨⃜✩̷══̸͜͞═̸̸̸᪳͟╗
-𝐑𝐄𝐆𝐈𝐒𝐓𝐑𝐎 𝐂𝐎𝐌𝐏𝐋𝐄𝐓𝐎 𝐄𝐗𝐈𝐓𝐎𝐒𝐎
-╚̷͓═̴̸᪳᷍═̷✩⃢̴═⃨⃜═̶⃕╡̴˚̸᪵✧̷⃘⃛᪻᪻᪻᷼᷍✧̵⃨˚̷᪵╞̶⃔══⃢̸⃨⃜✩̷══̸͜͞═̸̸̸᪳͟╝
+  if (age > 999) throw '*『😏』¡Viejo/a Sabroso/a!*'
+  if (age < 5) throw '*¿𝐃𝐨𝐧𝐝𝐞 𝐞𝐬𝐭𝐚𝐧 𝐭𝐮𝐬 𝐩𝐚𝐩á𝐬?*😂'
 
-﹏͜͡﹏͜͡﹏͜͡﹏͜͡﹏͜͡﹏͜͡﹏͜͡﹏͜͡﹏͜͡﹏͜͡﹏͜͡﹏͜͡﹏͜͡﹏͜͡﹏͜͡﹏͜͡﹏͜͡﹏͜͡
-*‧˚꒰🫧꒱༘‧: 𝐍𝐨𝐦𝐛𝐫𝐞:* ${name}
-*‧˚꒰🔍꒱༘‧: 𝐄𝐝𝐚𝐝:* ${age}
-꒰꛱ ͜ ꛱|꛱ ꛱͜ |꛱ ꛱͜ |꛱ ͜ ꛱|꛱ ͜ |୨🌔🏮୧꛱|꛱ ꛱͜ |꛱ ͜ ꛱ |꛱ ͜ ꛱|꛱ ꛱͜ |꛱ ͜ ꒱
-*「💥」𝐑𝐞𝐜𝐨𝐦𝐩𝐞𝐧𝐬𝐚𝐬:*
-ᦷᩘᦷ     ݂   🍅 ፡ Estrellas 🌟
-ᦷᩘᦷ     ݂   🎴  ፡ 5 Blackcoins 🪙
-ᦷᩘᦷ     ݂   🍅 ፡ 245 Experiencia 💸
-ᦷᩘᦷ     ݂   🎴  ፡ 12 Tokens 💰
-﹏͜͡﹏͜͡﹏͜͡﹏͜͡﹏͜͡﹏͜͡﹏͜͡﹏͜͡﹏͜͡﹏͜͡﹏͜͡﹏͜͡﹏͜͡﹏͜͡﹏͜͡﹏͜͡
+  user.name = name.trim()
+  user.age = age
+  user.regTime = + new Date
+  user.registered = true
+  global.db.data.users[m.sender].money += 600
+  global.db.data.users[m.sender].estrellas += 10
+  global.db.data.users[m.sender].exp += 245
+  global.db.data.users[m.sender].joincount += 5
 
- 🍫 Usᥲ *#perfil* ⍴ᥲrᥲ ᥎ᥱr 𝗍ᥙ ⍴ᥱr𝖿іᥣ.
-*usa el comando .menu para ver el menú y .verreg para ver tu verificación*
+  let sn = createHash('md5').update(m.sender).digest('hex').slice(0, 6)        
+  m.react('📩') 
 
-> (˶ᵔ ᵕ ᵔ˶) Recuerda seguír el canal de Goku black bot para estar al tanto de avisos y novedades del Bot 🔥
-`
+  let regbot = `╭══• ೋ•✧๑♡๑✧•ೋ •══╮
+*¡𝚁𝙴𝙶𝙸𝚂𝚃𝚁𝙾 𝙲𝙾𝙼𝙿𝙻𝙴𝚃𝙾 𝙴𝚇𝙸𝚃𝙾𝚂𝙾!*
+╰══• ೋ•✧๑♡๑✧•ೋ •══╯
+║_-~-__-~-__-~-__-~-__-~-__-~-__-~-__-~-__-~-__-~-__
+║
+║ ֪ ׂ⛓️ ̶ ׁ ֪ 𝐍𝐨𝐦𝐛𝐫𝐞: ${name}
+║ ֪ ׁ🌫️  𝇌 𝐄𝐝𝐚𝐝: ${age} *Años*
+║
+║ *𝙶𝚛𝚊𝚌𝚒𝚜 𝚙𝚘𝚛 𝚛𝚎𝚐𝚒𝚜𝚝𝚛𝚊𝚛𝚝𝚎* 
+║📝 *𝚄𝚝𝚒𝚕𝚒𝚣𝚊* *.menu* *𝚙𝚊𝚛𝚊* *𝚟𝚎𝚛* *𝚎𝚕* *𝚖𝚎𝚗ú* *𝚍𝚎* *𝚌𝚘𝚖𝚊𝚗𝚍𝚘𝚜.*
+║
+║
+║ ✨ 𝗥𝗲𝗰𝗼𝗺𝗽𝗲𝗻𝘀𝗮𝘀:
+║• 15 Estrellas 🌟
+║• 5 BlackCoins 🪙
+║• 245 Experiencia 💸
+║• 12 Tokens 💰
+╚══✦「꧙꧙꧙꧙꧙꧙꧙꧙꧙꧙꧙꧙」`
 
-await conn.sendMessage(m.chat, {
+  conn.sendMessage(m.chat, {
     text: regbot,
     contextInfo: {
-        externalAdReply: {
-            title: '⊱『✅𝆺𝅥 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗗𝗢(𝗔) 𝆹𝅥✅』⊰',
-            thumbnailUrl: 'https://telegra.ph/file/0bb7e9e7c8cb4e820f1fe.jpg',
-            mediaType: 1,
-            body: 'El Bot Más Good ☄'
-        }
+      externalAdReply: {
+        title: '⊱『✅𝆺𝅥 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗗𝗢(𝗔) 𝆹𝅥✅』⊰',
+        body: wm, 
+        thumbnailUrl: 'https://telegra.ph/file/0bb7e9e7c8cb4e820f1fe.jpg', 
+        sourceUrl: canales,
+        mediaType: 1,
+        showAdAttribution: true,
+        renderLargerThumbnail: true,
+      }
     }
-}, { quoted: m });
-
-
-
-await m.react('📪')
-  await conn.sendMessage(m.chat, {
-           text: regbot, 
-        contextInfo: {
-            externalAdReply: {
-                showAdAttribution: true,                      
-                containsAutoReply: true,
-                title: '⊱『✅𝆺𝅥 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗗𝗢(𝗔) 𝆹𝅥✅』⊰',  
-                body: dev,  
-                containsAutoReply: true,
-                showAdAttribution: true,
-                mediaType: 1, 
-                thumbnailUrl: 'https://telegra.ph/file/0bb7e9e7c8cb4e820f1fe.jpg' }}}, {quoted: m})
+  }, { quoted: fkontak })
+}
 
 handler.help = ['reg']
 handler.tags = ['rg']
-handler.command = ['verify', 'verificar', 'reg', 'register', 'registrar']
+handler.command = ['verify', 'verificar', 'reg', 'register', 'registrar'] 
 
 export default handler
