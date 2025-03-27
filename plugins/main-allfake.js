@@ -60,13 +60,11 @@ global.waitt = '🕒 *𝗘𝘀𝗽𝗲𝗿𝗮 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻𝘁
 global.waittt = '🕒 *𝗘𝘀𝗽𝗲𝗿𝗮 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻𝘁𝗼, 𝗦𝗼𝘆 𝗟𝗲𝗻𝘁𝗼 ...*';
 global.waitttt = '🕒 *𝗘𝘀𝗽𝗲𝗿𝗮 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻𝘁𝗼, 𝗦𝗼𝘆 𝗟𝗲𝗻𝘁𝗼 ...*';
 
-//Enlaces
-var grupo = 'https://chat.whatsapp.com/GD0al1LF7Ux2dmPF0fDFYZ'
-var canal = 'https://whatsapp.com/channel/0029VaYh3Zm4dTnQKQ3VLT0h'  
+//Enlaces  
 var git = '' 
 var youtube = '' 
 var github = '' 
-let correo = 'GokuBlack@gmail.com'
+let correo = 'onyxbot@gmail.com'
 
 global.redes = [canal, grupo, git, youtube, github, correo].getRandom()
 
