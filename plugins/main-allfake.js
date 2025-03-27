@@ -29,7 +29,7 @@ console.log(`Error : ${e}`)
 
 let pp = ''
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-//let pp = await conn.profilePictureUrl(who, 'image').catch(_ => '')
+//let pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://files.catbox.moe/svd1mh.jpg')
 
 //creador y otros
 global.creador = 'Wa.me/595972157130'
@@ -99,12 +99,12 @@ global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo
 }}, { quoted: m }
 
 global.icono = [ 
-'https://telegra.ph/file/465c19aff6901c8f6e57f.jpg',
-'https://telegra.ph/file/856e44c9d844853e075cd.jpg',
-'https://telegra.ph/file/b57bbca75d23852c832f7.jpg',
-'https://telegra.ph/file/218bb0ab792902a57d7ae.jpg',
-'https://telegra.ph/file/aeb1fe12db2b0e4c60cd3.jpg',
-'https://telegra.ph/file/e05334d1e187123884d66.jpg',
+'https://files.catbox.moe/svd1mh.jpg',
+'https://files.catbox.moe/svd1mh.jpg',
+'https://files.catbox.moe/svd1mh.jpg',
+'https://files.catbox.moe/svd1mh.jpg',
+'https://files.catbox.moe/svd1mh.jpg',
+'https://files.catbox.moe/svd1mh.jpg',
 ].getRandom()
 
 global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: "", serverMessageId: 100, newsletterName: namechannel, }, externalAdReply: { showAdAttribution: true, title: textbot, body: 'El Bot más God De FF 💥', mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
