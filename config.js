@@ -11,32 +11,29 @@ global.confirmCode = ''
 
 //• ↳𝑺𝑶𝑳𝑶 𝑫𝑬𝑺𝑨𝑹𝑹𝑶𝑳𝑳𝑨𝑫𝑶𝑹𝑬𝑺 𝑨𝑷𝑹𝑶𝑩𝑨𝑫𝑶𝑺
 global.owner = [
-['595992667005', '𝐂𝐫𝐞𝐚𝐝𝐨𝐫 🧑‍💻', true],
-['18294868853', 'Asistente', true],
-['59169739411'],
-['595972314588', 'Asistencia',  true],
-['5351524614']
+['593979133620', '𝐂𝐫𝐞𝐚𝐝𝐨𝐫 🧑‍💻', true],
+['5916973911']
 ];
 
 //• ↳𝑺𝑶𝑳𝑶 𝑴𝑶𝑫𝑬𝑹𝑨𝑫𝑶𝑹𝑬𝑺!
-global.mods = ['595992667005', '', '', '', '']
+global.mods = ['593979133620']
 
-global.suittag = ['595992667005']
+global.suittag = ['593979133620']
 global.prems = []
 
 //• ↳ ◜𝑴𝑨𝑹𝑪𝑨𝑺 𝑫𝑬 𝑨𝑮𝑼𝑨◞ • 💌
-global.packsticker = '𝐆𝐎𝐊𝐔-𝐁𝐋𝐀𝐂𝐊-𝐁𝐎𝐓-𝐌𝐃'
-global.packname = '󠁖󠁖󠁖󠁖󠁖󠁖󠁻󠁻𝐆𝐎𝐊𝐔𝐁𝐋𝐀𝐂𝐊-𝐁𝐎𝐓-𝐌𝐃'
-global.author = '𝐺𝑂𝐾𝑈-𝐵𝐿𝐴𝐶𝐾-𝐵𝑂𝑇-𝑀𝐷 ´･ᴗ･`'
-global.wm = 'l ꙰ 𝙶𝙾𝙺𝚄-𝙱𝙻𝙰𝙲𝙺-𝙱𝙾𝚃-𝙼𝙳 l ꙰';
-global.titulowm = '𝘗𝘖𝘞𝘌𝘙 𝘉𝘠 𝘐𝘝𝘈𝘕';
-global.titulowm2 = 'GOKᑌ-ᗷᒪᗩᑕK-ᗷOT-ᗰᗪ'
-global.igfg = 'ɢ૦𝗞Ս-𝗕𐐛𝔸𐊢𝗞-𝗕૦𝚃-ᎷＤ '
-global.botname = '𝐺𝑂𝐾𝑈-𝐵𝐿𝐴𝐶𝐾-𝐵𝑂𝑇-𝑀𝐷 💥'
-global.dev = 'g᥆kᥙ-ᑲᥣᥲᥴk-ᑲ᥆𝗍-mძ ﾉ)ﾟДﾟ(ヽ'
-global.textbot = 'ɠσƙυ-Ⴆʅαƈƙ-Ⴆσƚ-ɱԃ ճվ íѵαղ'
-global.gt = '𝗚𝗢𝗞𝗨𝗕𝗟𝗔𝗖𝗞';
-global.namechannel = '𝗚𝗢𝗞𝗨-𝗕𝗟𝗔𝗖𝗞-𝗕𝗢𝗧-𝗠𝗗 🗻'
+global.packsticker = 'ONYX-𝐁𝐎𝐓-𝐌𝐃'
+global.packname = '󠁖󠁖󠁖󠁖󠁖󠁖󠁻󠁻ONYX-𝐁𝐎𝐓-𝐌𝐃'
+global.author = 'ONYX-𝐵𝑂𝑇-𝑀𝐷 ´･ᴗ･`'
+global.wm = 'l ꙰ ONYX-𝙱𝙾𝚃 l ꙰';
+global.titulowm = 'ONYX-BOT';
+global.titulowm2 = 'ONYX-ᗷOT-ᗰᗪ'
+global.igfg = 'ONYX-𝗕૦𝚃-ᎷＤ '
+global.botname = 'Onyx-𝐵𝑂𝑇-𝑀𝐷 💥'
+global.dev = 'onyx-ᑲ᥆𝗍-mძ ﾉ)ﾟДﾟ(ヽ'
+global.textbot = 'onyx-Ⴆσƚ-ɱԃ'
+global.gt = 'Onyx-Bot';
+global.namechannel = 'ONYX-𝗕𝗢𝗧-𝗠𝗗 🗻'
 global.vs = 'V2'
 global.vsJB = '5.0'
 
@@ -94,17 +91,16 @@ global.fakegif4 = { key: { participant: `0@s.whatsapp.net`, ...(false ? { remote
 
 global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: '󠁖󠁖󠁖󠁖󠁖󠁖󠁻󠁻Goku-Black-Bot-MD', orderTitle: 'Bang', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net'}}}
 
-global.fgif2 = { key: {participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "6289643739077-1613049930@g.us" } : {})},message: {"videoMessage": { "title":'GokuBlack-Bot', "h": `Hmm`,'seconds': '99999', 'gifPlayback': 'true', 'caption': `Goku-Black-Bot-MD\n Ivan`, 'jpegThumbnail': logo4 }}}
-
+global.fgif2 = { key: {participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "6289643739077-1613049930@g.us" } : {})},message: {"videoMessage": { "title":'GokuBlack-Bot', "h": `Hmm`,'seconds': '99999', 'gifPlayback': 'true', 'caption': `Goku-Black-Bot-MD\n Ivan`, 'jpegThumbnail': logo4 }
 //• ↳ ◜𝑳𝑰𝑵𝑲𝑺◞ • 🌿
-global.gp4 = 'https://chat.whatsapp.com/Igsky5kNI7cDMsBJU6gcKB' //Grupo Oficial De GokuBlack 
-global.gp1 = 'https://chat.whatsapp.com/Igsky5kNI7cDMsBJU6gcKB' //Grupo 
-global.gp2 = 'https://chat.whatsapp.com/Igsky5kNI7cDMsBJU6gcKB' //Grupo
-global.comunidad1 = '' //Comunidad GokuBlack-Bot
-global.channel = '' //Canal Oficial
-global.yt = 'https://youtube.com/@Ivamods15' //Canal De Youtube
-global.md = 'https://github.com/Eliasivan' //Github Oficial
-global.correo = 'fireb5429@gmail.com'
+global.gp4 = ''
+global.gp1 = '' 
+global.gp2 = '' 
+global.comunidad1 = '' 
+global.channel = ''
+global.yt = ''
+global.md = ''
+global.correo = ''
 global.cn ='';
 
 var ase = new Date(); var hour = ase.getHours(); switch(hour){ case 0: hour = 'Linda Mañana'; break; case 1: hour = 'Linda Mañana'; break; case 2: hour = 'Linda Mañana'; break; case 3: hour = 'Linda Mañana'; break; case 4: hour = 'linda mañana'; break; case 5: hour = 'Linda Mañana'; break; case 6: hour = 'Linda Mañana'; break; case 7: hour = 'Linda Mañana'; break; case 8: hour = 'Linda Mañana'; break; case 9: hour = 'Linda Mañana'; break; case 10: hour = 'Lindo Dia'; break; case 11: hour = 'Lindo Dia'; break; case 12: hour = 'Lindo Dia'; break; case 13: hour = 'Lindo Dia'; break; case 14: hour = 'Linda Tarde'; break; case 15: hour = 'Linda Tarde'; break; case 16: hour = 'Linda Tarde'; break; case 17: hour = 'Linda Tarde'; break; case 18: hour = 'Linda Noche'; break; case 19: hour = 'Linda Noche'; break; case 20: hour = 'Linda Noche'; break; case 21: hour = 'Linda Noche'; break; case 22: hour = 'Linda Noche'; break; case 23: hour = 'Linda Noche'; break;}
