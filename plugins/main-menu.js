@@ -177,27 +177,27 @@ await m.react('🫧')
 
 //await conn.sendFile(m.chat, imagen1, 'yaemori.jpg', text.trim(), fkontak, null, rcanal)
 
-/*await conn.sendMessage(
+await conn.sendMessage(
   m.chat,
   { video: { url: vid }, caption: text.trim(),
   contextInfo: {
     mentionedJid: [m.sender],
     isForwarded: true,
     forwardedNewsletterMessageInfo: {
-      newsletterJid: '120363276986902836@newsletter',
-      newsletterName: 'ᘜOKᑌ-ᗷᒪᗩᑕK-ᗷOT-ᗰᗪ',
+      newsletterJid: '',
+      newsletterName: 'Onyx-ᗷOT-ᗰᗪ',
       serverMessageId: -1,
     },
     forwardingScore: 999,
     externalAdReply: {
       title: '𝐆𝐨𝐤𝐮-𝐁𝐥𝐚𝐜𝐤-𝐁𝐨𝐭-𝐌𝐃',
       body: dev,
-      thumbnailUrl: icono,
+      thumbnailUrl:
       sourceUrl: redes,
       mediaType: 1,
       renderLargerThumbnail: false,
     },
-  },*/
+  },
 
   gifPlayback: true, gifAttribution: 0 },
   { quoted: fkontak })
