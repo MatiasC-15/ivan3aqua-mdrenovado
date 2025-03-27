@@ -67,7 +67,7 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
         renderLargerThumbnail: true,
       }
     }
-  }, { quoted})
+  }, { quoted: })
 }
 
 handler.help = ['reg']
