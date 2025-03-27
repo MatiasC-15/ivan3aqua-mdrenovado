@@ -78,7 +78,7 @@ await conn.sendMessage(m.chat, {
 
 
 
-*/    await m.react('📪')
+*/await m.react('📪')
   await conn.sendMessage(m.chat, {
            text: regbot, 
         contextInfo: {
