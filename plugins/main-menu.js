@@ -177,7 +177,7 @@ await m.react('🫧')
 
 //await conn.sendFile(m.chat, imagen1, 'yaemori.jpg', text.trim(), fkontak, null, rcanal)
 
-await conn.sendMessage(
+/*await conn.sendMessage(
   m.chat,
   { video: { url: vid }, caption: text.trim(),
   contextInfo: {
@@ -197,7 +197,7 @@ await conn.sendMessage(
       mediaType: 1,
       renderLargerThumbnail: false,
     },
-  },
+  },*/
 
   gifPlayback: true, gifAttribution: 0 },
   { quoted: fkontak })
