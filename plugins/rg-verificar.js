@@ -78,7 +78,7 @@ await conn.sendMessage(m.chat, {
 
 
 
-*/await m.react('📪')
+await m.react('📪')
   await conn.sendMessage(m.chat, {
            text: regbot, 
         contextInfo: {
@@ -91,32 +91,6 @@ await conn.sendMessage(m.chat, {
                 showAdAttribution: true,
                 mediaType: 1, 
                 thumbnailUrl: 'https://telegra.ph/file/0bb7e9e7c8cb4e820f1fe.jpg' }}}, {quoted: m})
-*/
-
-/*let chtxt = `ੈ₊˚༅༴│↷◌⁺˖ 🌸 *𝐆𝐎𝐊𝐔 - 𝐁𝐋𝐀𝐂𝐊* 🌸
-🔥ੈ₊˚༅༴│.👥 *𝚄𝚜𝚎𝚛* » ${m.pushName || 'Anónimo'}  
-🔥ੈ₊˚༅༴│.📇 *𝚅𝚎𝚛𝚒𝚏𝚒𝚌𝚊𝚌𝚒𝚘́𝚗* » ${user.name}  
-🔥ੈ₊˚༅༴│.🍰 *𝙴𝚍𝚊𝚍* » ${user.age} años  
-🔥ੈ₊˚༅༴│.⌨️ *𝙳𝚎𝚜𝚌𝚛𝚒𝚙𝚌𝚒𝚘𝚗* » ${user.descripcion}  
-🔥ੈ₊˚༅༴│.🍬 *𝙽𝚞𝚖𝚎𝚛𝚘 𝚍𝚎 𝚛𝚎𝚐𝚒𝚜𝚝𝚛𝚘* »
-⤷ ${sn}`;
-
-    let channelID = '120363351515256850@newsletter';
-        await conn.sendMessage(channelID, {
-        text: chtxt,
-        contextInfo: {
-            externalAdReply: {
-                title: "୧⍤⃝💐 𝐑͜͡𝐄͜͡𝐆͜͡𝐈͜͡𝐒͜͡𝐓͜͡𝐑͜͡𝐎͜͡  𝘾𝙊⃟𝙈𝙋𝙇𝙀᪵᪺𝙏⃨𝙊 ❛░⃟ ⃟°˟̫̫",
-                body: '☠️ 𝑱𝒂𝒋𝒂, 𝒖𝒏 𝒏𝒖𝒆𝒗𝒐 𝒉𝒖𝒎𝒂𝒏𝒐 𝒆𝒏 𝒎𝒊 𝒃𝒂𝒔𝒆 𝒅𝒆 𝒅𝒂𝒕𝒐𝒔!',
-                thumbnailUrl: perfil,
-                sourceUrl: redes,
-                mediaType: 1,
-                showAdAttribution: false,
-                renderLargerThumbnail: false*\
-            }
-        }
-    }, { quoted: null });
-};
 
 handler.help = ['reg']
 handler.tags = ['rg']
