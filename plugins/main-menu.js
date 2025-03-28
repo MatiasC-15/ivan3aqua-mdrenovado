@@ -184,15 +184,15 @@ await conn.sendMessage(
     mentionedJid: [m.sender],
     isForwarded: true,
     forwardedNewsletterMessageInfo: {
-      newsletterJid: '',
-      newsletterName: 'Onyx-ᗷOT-ᗰᗪ',
+      newsletterJid: '120363276986902836@newsletter',
+      newsletterName: 'ᘜOKᑌ-ᗷᒪᗩᑕK-ᗷOT-ᗰᗪ',
       serverMessageId: -1,
     },
     forwardingScore: 999,
     externalAdReply: {
-      title: 'Onyx-𝐁𝐨𝐭-𝐌𝐃',
+      title: '𝐆𝐨𝐤𝐮-𝐁𝐥𝐚𝐜𝐤-𝐁𝐨𝐭-𝐌𝐃',
       body: dev,
-      thumbnailUrl:
+      thumbnailUrl: icono,
       sourceUrl: redes,
       mediaType: 1,
       renderLargerThumbnail: false,
