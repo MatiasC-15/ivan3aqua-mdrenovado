@@ -27,50 +27,62 @@ return res.data
 console.log(`Error : ${e}`)
 }}
 
-let pp = ''
-let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-//let pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://files.catbox.moe/svd1mh.jpg')
-
 //creador y otros
-global.creador = 'Wa.me/595972157130'
+global.creador = 'Wa.me/584164137403 '
 global.ofcbot = `${conn.user.jid.split('@')[0]}`
-global.asistencia = 'Wa.me/18294868853'
-global.namechannel = 'Onyx-Bot' global.namechannel2 = 'Onyx-Bot'
-global.namegrupo = 'Onyx-Bot'
-global.namecomu = 'Onyx-Bot'
-global.namecomu2 = 'Onyx-Bot'
-global.colab1 = 'Ricardo'
-global.colab2 = 'Ivan'
+global.asistencia = 'Wa.me/+584164137403'
+global.namechannel = 'ᯓ᮫݃͜ᮨ🌸ܾ݉𐊢̼͛һ̧͑͡ɑ̠̇𝖓̜̇𝖓̑𝖊͓͜𝘭 𝘚𝗎ࣼｍ͑͡ⅈࣾ ٞ 𝘚َٙ͜ɑ𝚔𝗎͡𝔯ɑ𝘇゙ɑ͜𝑤ɑ᭓᭫◞˚ₓ'
+global.namechannel2 = 'ᯓ᮫݃͜ᮨ🌸ܾ݉𐊢̼͛һ̧͑͡ɑ̠̇𝖓̜̇𝖓̑𝖊͓͜𝘭 𝘚𝗎ࣼｍ͑͡ⅈࣾ ٞ 𝘚َٙ͜ɑ𝚔𝗎͡𝔯ɑ𝘇゙ɑ͜𝑤ɑ᭓᭫◞˚ₓ"'
+global.namegrupo = 'gяυρσ ∂єℓ вσт'
+global.namecomu = '¢αηαℓ ∂єℓ вσт'
+global.listo = '✎ *Aquí tienes ฅ^•ﻌ•^ฅ*'
+global.fotoperfil = await conn.profilePictureUrl(m.sender, 'image').catch(_ => 'https://files.catbox.moe/xr2m6u.jpg')
+
+//Ids channel
+global.idchannel = '120363411041761402@newsletter'
+global.canalIdM = ["120363324350463849@newsletter", "120363324350463849@newsletter"]
+global.canalNombreM = ["ᯓ᮫݃͜ᮨ🌸ܾ݉𐊢̼͛һ̧͑͡ɑ̠̇𝖓̜̇𝖓̑𝖊͓͜𝘭 𝘚𝗎ࣼｍ͑͡ⅈࣾ ٞ 𝘚َٙ͜ɑ𝚔𝗎͡𝔯ɑ𝘇゙ɑ͜𝑤ɑ᭓᭫◞˚ₓ", "ᯓ᮫݃͜ᮨ🌸ܾ݉𐊢̼͛һ̧͑͡ɑ̠̇𝖓̜̇𝖓̑𝖊͓͜𝘭 𝘚𝗎ࣼｍ͑͡ⅈࣾ ٞ 𝘚َٙ͜ɑ𝚔𝗎͡𝔯ɑ𝘇゙ɑ͜𝑤ɑ᭓᭫◞˚ₓ"]
+global.channelRD = await getRandomChannel()
+
+//fechas
+global.d = new Date(new Date + 3600000)
+global.locale = 'es'
+global.dia = d.toLocaleDateString(locale, {weekday: 'long'})
+global.fecha = d.toLocaleDateString('es', {day: 'numeric', month: 'numeric', year: 'numeric'})
+global.mes = d.toLocaleDateString('es', {month: 'long'})
+global.año = d.toLocaleDateString('es', {year: 'numeric'})
+global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true})
 
 //Reacciones De Comandos.!
 global.rwait = '🕒'
 global.done = '✅'
 global.error = '✖️'
 
-//Emojis determinado de Ai Yaemori
-global.emoji = '🔥'
-global.emoji2 = '💥'
-global.emoji3 = '❤️‍🔥'
+//Emojis determinado de Yuki Bot
+global.emoji = '🍧'
+global.emoji2 = '🍬'
+global.emoji3 = '🍨'
 global.emoji4 = '🍭'
 global.emojis = [emoji, emoji2, emoji3, emoji4].getRandom()
 
 //mensaje en espera
-global.wait = '🕒 *𝗘𝘀𝗽𝗲𝗿𝗮 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻𝘁𝗼, 𝗦𝗼𝘆 𝗟𝗲𝗻𝘁𝗼 ...*';
-global.waitt = '🕒 *𝗘𝘀𝗽𝗲𝗿𝗮 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻𝘁𝗼, 𝗦𝗼𝘆 𝗟𝗲𝗻𝘁𝗼 ...*';
-global.waittt = '🕒 *𝗘𝘀𝗽𝗲𝗿𝗮 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻𝘁𝗼, 𝗦𝗼𝘆 𝗟𝗲𝗻𝘁𝗼 ...*';
-global.waitttt = '🕒 *𝗘𝘀𝗽𝗲𝗿𝗮 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻𝘁𝗼, 𝗦𝗼𝘆 𝗟𝗲𝗻𝘁𝗼 ...*';
+global.wait = '🕒 *𝗘𝘀𝗽𝗲𝗿𝗮 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻𝘁𝗼, 𝗦𝗼𝘆 𝗟𝗲𝗻𝘁𝗮 ...*';
+global.waitt = '🕒 *𝗘𝘀𝗽𝗲𝗿𝗮 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻𝘁𝗼, 𝗦𝗼𝘆 𝗟𝗲𝗻𝘁𝗮 ...*';
+global.waittt = '🕒 *𝗘𝘀𝗽𝗲𝗿𝗮 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻𝘁𝗼, 𝗦𝗼𝘆 𝗟𝗲𝗻𝘁𝗮 ...*';
+global.waitttt = '🕒 *𝗘𝘀𝗽𝗲𝗿𝗮 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻𝘁𝗼, 𝗦𝗼𝘆 𝗟𝗲𝗻𝘁𝗮 ...*';
 
-//Enlaces  
-var git = '' 
-var youtube = '' 
-var github = '' 
-let correo = 'onyxbot@gmail.com'
+//Enlaces
+var canal = 'https://whatsapp.com/channel/0029VapSIvR5EjxsD1B7hU3T'  
+let canal2 = 'https://whatsapp.com/channel/0029VavzewJLikg78gILRn1o'
+var git = 'https://github.com/Leoneloficial'
+var github = 'https://github.com/Leoneloficial/-Starting-8-estrellas-' 
+let correo = 'thekingdestroy507@gmail.com'
 
-global.redes = [canal, grupo, git, youtube, github, correo].getRandom()
+global.redes = [canal, canal2, git, github, correo].getRandom()
 
 //Imagen
 let category = "imagen"
-const db = './media/database/db.json'
+const db = './src/database/db.json'
 const db_ = JSON.parse(fs.readFileSync(db))
 const random = Math.floor(Math.random() * db_.links[category].length)
 const randomlink = db_.links[category][random]
@@ -83,17 +95,15 @@ var ase = new Date(); var hour = ase.getHours(); switch(hour){ case 0: hour = 'L
 global.saludo = hour;
 
 //tags
-global.nombre = conn.getName(m.sender)
+global.nombre = m.pushName || 'Anónimo'
 global.taguser = '@' + m.sender.split("@s.whatsapp.net")
 var more = String.fromCharCode(8206)
 global.readMore = more.repeat(850)
 
 //Fakes
-global.fkontak = { key: { participants:"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
+global.fkontak = { key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `6285600793871-1614953337@g.us` } : {}) }, message: { 'contactMessage': { 'displayName': `${nombre}`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${nombre},;;;\nFN:${nombre},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': null, thumbnail: null,sendEphemeral: true}}}
 
-// global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: `${packname}`, orderTitle: 'Bang', thumbnail: icons, sellerJid: '0@s.whatsapp.net'}}}
-
-global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '', newsletterName: "onyx-Bot", serverMessageId: -1 }
+global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, newsletterName: channelRD.name, serverMessageId: -1 }
 }}, { quoted: m }
 
 global.icono = [ 
@@ -105,6 +115,17 @@ global.icono = [
 'https://files.catbox.moe/svd1mh.jpg',
 ].getRandom()
 
-global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: "", serverMessageId: 100, newsletterName: namechannel, }, externalAdReply: { showAdAttribution: true, title: textbot, body: 'El Bot más God De FF 💥', mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
+global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, serverMessageId: 100, newsletterName: channelRD.name, }, externalAdReply: { showAdAttribution: true, title: packname, body: dev, mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
 
 export default handler
+
+function pickRandom(list) {
+return list[Math.floor(Math.random() * list.length)]
+  }
+
+async function getRandomChannel() {
+let randomIndex = Math.floor(Math.random() * canalIdM.length)
+let id = canalIdM[randomIndex]
+let name = canalNombreM[randomIndex]
+return { id, name }
+}
