@@ -187,10 +187,6 @@ await conn.sendMessage(
   contextInfo: {
     mentionedJid: [m.sender],
     isForwarded: true,
-    forwardedNewsletterMessageInfo: {
-      newsletterJid: channelRD.id,
-      newsletterName: channelRD.name,
-      serverMessageId: -1,
     },/*
     forwardingScore: 999,
     externalAdReply: {
