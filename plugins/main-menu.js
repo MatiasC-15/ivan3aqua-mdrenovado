@@ -190,7 +190,7 @@ await conn.sendMessage(
     },
     forwardingScore: 999,
     externalAdReply: {
-      title: '𝐆𝐨𝐤𝐮-𝐁𝐥𝐚𝐜𝐤-𝐁𝐨𝐭-𝐌𝐃',
+      title: 'Onyx-𝐁𝐨𝐭-𝐌𝐃',
       body: dev,
       thumbnailUrl:
       sourceUrl: redes,
