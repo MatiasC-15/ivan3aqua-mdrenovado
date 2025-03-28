@@ -186,7 +186,6 @@ await conn.sendMessage(
   { video: { url: vid }, caption: text.trim(),
   contextInfo: {
     mentionedJid: [m.sender],
-    isForwarded: true,
     },/*
     forwardingScore: 999,
     externalAdReply: {
