@@ -14,7 +14,7 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
 
   let [_, name, splitter, age] = text.match(Reg)
 
-  if (!name) throw '*『✦』No puedes registrarte sin nombre, el nombre es obligatorio. Inténtelo de nuevo.*'
+  if (!name) throw '*『✦』No puedes registr3arte sin nombre, el nombre es obligatorio. Inténtelo de nuevo.*'
   if (!age) throw '*『✦』No puedes registrarte sin la edad, la edad es opcional. Inténtelo de nuevo.*'
   if (name.length >= 30) throw '*『✦』El nombre no debe tener más de 30 caracteres.*' 
 
@@ -67,7 +67,7 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
         renderLargerThumbnail: true,
       }
     }
-  }, { quoted: fkontak })
+  }, { quoted: })
 }
 
 handler.help = ['reg']
