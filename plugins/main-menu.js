@@ -204,7 +204,7 @@ await conn.sendMessage(
   },
 
   gifPlayback: true, gifAttribution: 0 },
-  { quoted: fkontak })
+  { quoted: m })
 
   } catch (e) {
     conn.reply(m.chat, '🔵 Lo sentimos, el menú tiene un error', m, rcanal, )
