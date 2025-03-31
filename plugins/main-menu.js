@@ -165,7 +165,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     textFinal = textFinal.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name]);
 
     // Agregamos la indicación y los botones al menú
-    let menuText = textFinal.trim() + "\n\n🔹 Selecciona una opción:";
+    /*let menuText = textFinal.trim() + "\n\n🔹 Selecciona una opción:";
 
     const buttons = [
       {
@@ -178,7 +178,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
         buttonText: { displayText: "🏓 Ping" },
         type: 1,
       },
-    ];
+    ];*/
 
     let img = 'https://qu.ax/Mvhfa.jpg';
     await m.react('🍁');
@@ -188,8 +188,6 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
       {
         image: { url: img },
         caption: menuText,
-        buttons: buttons,
-        footer: "Selecciona una opción",
         viewOnce: true,
       },
       { quoted: m }
