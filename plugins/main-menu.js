@@ -187,7 +187,6 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
       m.chat,
       {
         image: { url: img },
-        caption: menuText,
         viewOnce: true,
       },
       { quoted: m }
