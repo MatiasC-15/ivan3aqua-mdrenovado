@@ -1,7 +1,7 @@
 const handler = async (m, {conn}) => {
   m.reply(global.Menulogos);
 };
-handler.command = /^(Menu|menu2)$/i;
+handler.command = /^(Menuu|menu1)$/i;
 export default handler;
 handler.admin = true
 handler.group = true
